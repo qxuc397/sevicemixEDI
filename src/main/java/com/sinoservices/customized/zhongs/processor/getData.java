@@ -41,6 +41,8 @@ public class getData implements Processor {
 		    request = msg.replace("\"code\":0,","\"code\":0,\"systemId\":\"ZHONGS\",\"authCode\":\""+authCode+"\",");
 		}
 		in.setBody(request);
+	    int a =0;
+	    System.out.println(a+2);
 		backupBody(in, jaxbElement, request);
 		WolfDIPContextUtils.encode(jaxbElement, in);
 	}
