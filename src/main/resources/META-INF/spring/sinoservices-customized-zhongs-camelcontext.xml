@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:camel="http://camel.apache.org/schema/spring"
+       xmlns:osgi="http://www.springframework.org/schema/osgi"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+       
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd
+       http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+       
+      
+      
+      <bean id="getData" class="com.sinoservices.customized.zhongs.processor.getData">
+      </bean>
+      <osgi:service ref="getData" interface="com.sinoservices.customized.zhongs.processor.getData"/>
+      <bean id="getParameter4AuthCode" class="com.sinoservices.customized.zhongs.processor.getParameter4AuthCode">
+      </bean>
+      <osgi:service ref="getParameter4AuthCode" interface="com.sinoservices.customized.zhongs.processor.getParameter4AuthCode"/>
+           
+</beans>
